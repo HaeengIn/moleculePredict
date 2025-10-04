@@ -1,4 +1,3 @@
-# main_fixed.py
 import os, sys
 import numpy as np
 import pandas as pd
@@ -101,7 +100,7 @@ model = LGBMRegressor(
     random_state=RANDOM_STATE
 )
 
-model.fit(X_train, y_train)  # early stopping 제거하여 호환성 확보
+model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
